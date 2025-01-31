@@ -1,0 +1,19 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+    <div class="FormDesign">
+    <h2>Subject List</h2>
+    <a href="{% url 'create_subject' %}">Create Subject</a>
+    <ul class="subject-list">
+        {% for subject in subjects %}
+            <li class="subject-item">
+                <a href="{% url 'subject_detail' subject.id %}">{{ subject.name }}</a>
+                <div class="action-links">
+                <a href="{% url 'update_subject' subject.id %}">Edit</a>
+                <a href="{% url 'delete_subject' subject.id %}">Delete</a>
+            </li>
+        {% endfor %}
+    </ul>
+    </div>
+{% endblock content%}
+

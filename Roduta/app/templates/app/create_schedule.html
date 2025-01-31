@@ -1,0 +1,58 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+    <div class="FormDesign">
+    <form method="post">
+        <h2>Create a New Schedule</h2>
+        {% csrf_token %}
+        <label>Student:</label>
+        <select name="student">
+            {% for student in students %}
+                <option value="{{ student.id }}">{{ student.username }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <br>
+        <label>Subject:</label>
+        <select name="subject">
+            {% for subject in subjects %}
+                <option value="{{ subject.id }}">{{ subject.name }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <br>
+        <label>Professor:</label>
+        <select name="professor">
+            {% for professor in professors %}
+                <option value="{{ professor.id }}">{{ professor.name }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <br>
+        <label>Day:</label>
+        <select name="day">
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Thursday">Thursday</option>
+            <option value="Friday">Friday</option>
+            <option value="Saturday">Saturday</option>
+        </select>
+        <br>
+        <br>
+        <label>Start Time:</label>
+        <input type="time" name="start_time" required>
+        <br>
+        <br>
+        <label>End Time:</label>
+        <input type="time" name="end_time" required>
+        <br>
+        <br>
+        <button type="submit">Create Schedule</button>
+        <br>
+        <br>
+    </form>
+        <a href="{% url 'schedule_list2' %}">Go to Schedule List</a>
+        <br>
+    </div>
+{% endblock content %}

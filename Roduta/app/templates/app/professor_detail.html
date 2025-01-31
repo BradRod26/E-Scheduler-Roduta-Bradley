@@ -1,0 +1,14 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+<div class="FormDesign">
+<h1>Professor Details</h1>
+
+    <p><strong>Name:</strong> {{ professor.name }}</p>
+    <p><strong>Email:</strong> {{ professor.email }}</p>
+
+    <a href="{% url 'professor_list' %}">Back to Professor List</a>
+    <a href="{% url 'update_professor' professor.id %}">Edit Professor</a>
+    <br>
+</div>
+{% endblock content%}

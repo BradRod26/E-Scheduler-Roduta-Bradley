@@ -1,0 +1,220 @@
+.post-entry {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.container h1 {
+    margin-left: 30px;
+    font-size: 80px;
+    color: #00663f;
+}
+
+body {
+    background-color: #ffffcc;
+    margin: 0;
+}
+
+.NavBar {
+    display: flex;
+    justify-content: flex-end;
+    background-color:  #66ff99;
+    padding: 30px;
+    font-size: 20px;
+}
+
+.NavBar a {
+    color: #00663f;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+.NavBar a:hover {
+    color: #ffcc99;
+}
+
+button {
+    background-color: #00663f;
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    text-decoration: none;
+    display: inline-block;
+}
+
+button:hover {
+    background-color: #004d30; /* Darker green */
+    transform: scale(1.05); /* Slightly enlarges the button */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow effect */
+}
+
+button:active {
+    transform: scale(0.98); /* Slightly shrinks when clicked */
+}
+
+.FormDesign {
+    border-radius: 20px;
+    border: 5px solid #00663f;
+    height: auto;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    background-color: #b3ffb3;
+    text-align: center;
+}
+
+.FormDesign-Schedule{
+    border-radius: 20px;
+    border: 5px solid #00663f;
+    height: auto;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    background-color: #b3ffb3;
+    text-align: center;
+}
+
+.FormDesign-Schedule h2 {
+    text-align: center;
+    font-size: 50px;
+    color: #00663f;
+}
+
+.FormDesign h2 {
+    text-align: center;
+    font-size: 50px;
+    color: #00663f;
+}
+
+p {
+    text-align: center;
+    align-items: center;
+}
+
+.FormDesign-Schedule a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    color: #00663f;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.FormDesign a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    color: #00663f;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.professor-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.professor-item {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 500px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.student-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.student-item {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 500px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.subject-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subject-item {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 500px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.action-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.Table {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        border-collapse: collapse;
+}
+
+.Table th, .Table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.Table th {
+    background-color: #f4f4f4;
+}
+
+.Table td {
+    background-color: #f9f9f9;
+}
+
+.actions a {
+    text-decoration: none;
+    color: #007BFF;
+    margin-right: 10px;
+}
+
+.actions a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,14 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+<div class="FormDesign">
+<h1>Subject Details</h1>
+
+    <p><strong>Code:</strong> {{ subject.name }}</p>
+    <p><strong>Name:</strong> {{ subject.email }}</p>
+
+    <a href="{% url 'subject_list' %}">Back to Subject List</a>
+    <a href="{% url 'update_subject' subject.id %}">Edit subject</a>
+    <br>
+</div>
+{% endblock content%}

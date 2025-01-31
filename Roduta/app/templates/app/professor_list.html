@@ -1,0 +1,19 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+   <div class="FormDesign">
+    <h2>Professor List</h2>
+    <a href="{% url 'create_professor' %}">Create Professor</a>
+    <ul class="professor-list">
+        {% for professor in professors %}
+            <li class="professor-item">
+                <a href="{% url 'professor_detail' professor.id %}">{{ professor.name }}</a>
+                <div class="action-links">
+                    <a href="{% url 'update_professor' professor.id %}">Edit</a>
+                    <a href="{% url 'delete_professor' professor.id %}">Delete</a>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+    </div>
+{% endblock content %}

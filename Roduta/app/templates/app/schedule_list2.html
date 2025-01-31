@@ -1,0 +1,38 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+    <div class="FormDesign-Schedule">
+    <h2>Schedule List</h2>
+    {% if schedules %}
+    <table class="Table" border="1">
+        <tr>
+            <th>Student</th>
+            <th>Subject</th>
+            <th>Professor</th>
+            <th>Day</th>
+            <th>Time</th>
+            <th>Actions</th>
+        </tr>
+        {% for schedule in schedules %}
+        <tr>
+            <td>{{ schedule.student.username }}</td>
+            <td>{{ schedule.subject.name }}</td>
+            <td>{{ schedule.professor.name }}</td>
+            <td>{{ schedule.day }}</td>
+            <td>{{ schedule.start_time }} - {{ schedule.end_time }}</td>
+            <td>
+                <a href="{% url 'schedule_detail' schedule.id %}">View</a>
+                <a href="{% url 'update_schedule' schedule.id %}">Edit</a>
+                <a href="{% url 'delete_schedule' schedule.id %}">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <p>No schedules available.</p>
+    {% endif %}
+    <br>
+    <a href="{% url 'create_schedule' %}">Create New Schedule</a>
+        <br>
+    </div>
+{% endblock %}

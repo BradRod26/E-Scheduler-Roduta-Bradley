@@ -1,0 +1,27 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+<div class="FormDesign">
+<h1>Update Professor</h1>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}  <!-- Render the form fields automatically -->
+
+    {% if form.errors %}
+        <ul>
+            {% for field in form %}
+                {% for error in field.errors %}
+                    <li>{{ error }}</li>
+                {% endfor %}
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    <button type="submit">Update Professor</button>
+</form>
+
+<a href="{% url 'professor_list' %}">Back to Professor List</a>
+    <br>
+</div>
+{% endblock content%}

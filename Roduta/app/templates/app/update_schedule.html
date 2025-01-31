@@ -1,0 +1,57 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+    <div class="FormDesign">
+    <h2>Update Schedule</h2>
+    <form method="post">
+        {% csrf_token %}
+        <label>Student:</label>
+        <select name="student">
+            {% for student in students %}
+                <option value="{{ student.id }}" {% if schedule.student.id == student.id %}selected{% endif %}>{{ student.username }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <br>
+        <label>Subject:</label>
+        <select name="subject">
+            {% for subject in subjects %}
+                <option value="{{ subject.id }}" {% if schedule.subject.id == subject.id %}selected{% endif %}>{{ subject.name }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <br>
+        <label>Professor:</label>
+        <select name="professor">
+            {% for professor in professors %}
+                <option value="{{ professor.id }}" {% if schedule.professor.id == professor.id %}selected{% endif %}>{{ professor.name }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <br>
+        <label>Day:</label>
+        <select name="day">
+            <option value="Monday" {% if schedule.day == "Monday" %}selected{% endif %}>Monday</option>
+            <option value="Tuesday" {% if schedule.day == "Tuesday" %}selected{% endif %}>Tuesday</option>
+            <option value="Wednesday" {% if schedule.day == "Wednesday" %}selected{% endif %}>Wednesday</option>
+            <option value="Thursday" {% if schedule.day == "Thursday" %}selected{% endif %}>Thursday</option>
+            <option value="Friday" {% if schedule.day == "Friday" %}selected{% endif %}>Friday</option>
+            <option value="Saturday" {% if schedule.day == "Saturday" %}selected{% endif %}>Saturday</option>
+        </select>
+        <br>
+        <br>
+        <label>Start Time:</label>
+        <input type="time" name="start_time" value="{{ schedule.start_time }}" required>
+        <br>
+        <br>
+        <label>End Time:</label>
+        <input type="time" name="end_time" value="{{ schedule.end_time }}" required>
+        <br>
+        <br>
+        <button type="submit">Update Schedule</button>
+    </form>
+    <br>
+    <a href="{% url 'schedule_list2' %}">Back to List</a>
+    <br>
+    </div>
+{% endblock content %}

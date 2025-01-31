@@ -1,0 +1,17 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+    <div class="FormDesign">
+    <h2>Schedule Details</h2>
+    <p><strong>Student:</strong> {{ schedule.student.username }}</p>
+    <p><strong>Subject:</strong> {{ schedule.subject.name }}</p>
+    <p><strong>Professor:</strong> {{ schedule.professor.name }}</p>
+    <p><strong>Day:</strong> {{ schedule.day }}</p>
+    <p><strong>Time:</strong> {{ schedule.start_time }} - {{ schedule.end_time }}</p>
+    <br>
+    <a href="{% url 'update_schedule' schedule.id %}">Edit</a>
+    <a href="{% url 'delete_schedule' schedule.id %}">Delete</a>
+    <a href="{% url 'schedule_list2' %}">Back to List</a>
+    <br>
+    </div>
+{% endblock %}

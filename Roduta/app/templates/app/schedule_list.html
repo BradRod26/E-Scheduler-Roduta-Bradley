@@ -1,0 +1,14 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+    <div class="FormDesign">
+    <h2>E-Scheduler</h2>
+    <a href="{% url 'create_schedule' %}">Schedule</a>
+    <a href="{% url 'create_professor' %}">Professor</a>
+    <a href="{% url 'create_student' %}">Student</a>
+    <a href="{% url 'create_subject' %}">Subject</a>
+    <br>
+    <br>
+    </div>
+
+{% endblock content %}
